@@ -188,7 +188,8 @@ void WinSendInputEventHandler::sendTextEntryEvent(QString maintext)
 
             if (tempList.size() > 0)
             {
-                INPUT tempBuffer[tempList.size()] = {0};
+                auto size = tempList.size();
+                INPUT tempBuffer[size] = {0};
 
                 QListIterator<unsigned int> tempiter(tempList);
                 unsigned int j = 0;
